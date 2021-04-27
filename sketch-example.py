@@ -12,7 +12,7 @@ class Sketch(Engine):
 
     def update(self):
         Systems.Render.clear_surface(self.get_surface())
-        mx, my = self.get_mouse_state()
+        mx, my = Systems.Mouse.get_mouse_position()
         Systems.Render.line(self.get_surface(), 5, 5, mx, my, [128, 128, 128, 1])
 
 
