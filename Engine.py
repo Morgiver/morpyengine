@@ -62,9 +62,9 @@ class Engine:
         Start application and running the update loop
         :return integer:
         """
-        # Initialize SDL2
+        # Initialize SDL2 Lib
         sdl2.ext.init()
-        # Create the main Window
+        # Create and show the main Window
         self.window = sdl2.ext.Window(self.window_title, size=(self.width, self.height))
         self.window.show()
         # Setup the application
