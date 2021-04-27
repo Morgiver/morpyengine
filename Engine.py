@@ -8,5 +8,9 @@ class Engine:
         self.window_title = window_title
         self.width = width
         self.height = height
-        self.loop_state = False
+        self.loop_state = LOOP_STATE_STOPPED
         self.window = None
+
+    def set_loop_state(self, state):
+        if state == LOOP_STATE_RUNNING or state == LOOP_STATE_STOPPED or state == LOOP_STATE_PAUSED:
+            self.loop_state = state
