@@ -29,3 +29,20 @@ class Engine:
 
     def get_surface(self):
         return self.window.get_surface()
+
+    def run(self):
+        sdl2.ext.init()
+        self.window = sdl2.ext.Window(self.window_title, size=(self.width, self.height))
+        self.window.show()
+        self.setup()
+
+        self.set_loop_state(LOOP_STATE_RUNNING)
+
+        while self.loop_state != LOOP_STATE_STOPPED:
+            self.handle_events(sdl2.ext.get_events())
+            self.update()
+            self.window.refresh()
+
+        sdl2.ext.quit()
+
+        return 0
