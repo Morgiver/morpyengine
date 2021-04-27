@@ -21,12 +21,14 @@ class Engine:
         Setup the Engine to build an app around it
         :return:
         """
+        pass
 
     def update(self):
         """
         Updating the Engine at each loop
         :return:
         """
+        pass
 
     def set_loop_state(self, state):
         """
@@ -60,18 +62,22 @@ class Engine:
         Start application and running the update loop
         :return integer:
         """
+        # Initialize SDL2
         sdl2.ext.init()
+        # Create the main Window
         self.window = sdl2.ext.Window(self.window_title, size=(self.width, self.height))
         self.window.show()
+        # Setup the application
         self.setup()
-
+        # Set loop state on Running
         self.set_loop_state(LOOP_STATE_RUNNING)
-
+        # Running the update Loop
         while self.loop_state != LOOP_STATE_STOPPED:
             self.handle_events(sdl2.ext.get_events())
             self.update()
             self.window.refresh()
 
+        # Exiting the SDL2
         sdl2.ext.quit()
 
         return 0
