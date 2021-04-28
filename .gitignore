@@ -1,5 +1,5 @@
 .idea/
-src/morpyengine_morgiver.egg-info/
+src/morpyengine.egg-info/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
