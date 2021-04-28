@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="morpyengine-morgiver",
-    version="0.0.1",
+    version="0.0.2",
     author="Morgiver",
     author_email="me@morgiver.net",
     description="A small SDL2 Graphic Engine to learn how it work",
@@ -15,6 +15,10 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/Morgiver/morpyengine/issues",
     },
+    install_requires=[
+        'pysdl2',
+        'pysdl2-dll'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
