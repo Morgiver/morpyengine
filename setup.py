@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="morpyengine",
-    version="0.0.1",
+    version="0.0.2",
     author="Morgiver",
     author_email="me@morgiver.net",
     description="A small SDL2 Graphic Engine to learn how it work",
