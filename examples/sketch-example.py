@@ -1,6 +1,6 @@
 import sys
-import Systems
-from Engine import Engine
+from src.morpyengine import Systems
+from src.morpyengine.Engine import Engine
 
 
 class Sketch(Engine):
