@@ -1,6 +1,6 @@
 import sys
-from src.morpyengine import Systems
 from src.morpyengine.Engine import Engine
+from src.morpyengine.Systems import Render, Mouse
 
 
 class Sketch(Engine):
@@ -11,9 +11,9 @@ class Sketch(Engine):
         pass
 
     def update(self):
-        Systems.Render.clear_surface(self.get_surface())
-        mx, my = Systems.Mouse.get_mouse_position()
-        Systems.Render.line(self.get_surface(), 5, 5, mx, my, [128, 128, 128, 1])
+        Render.clear_surface(self.get_surface())
+        mx, my = Mouse.get_mouse_position()
+        Render.line(self.get_surface(), 5, 5, mx, my, [128, 128, 128, 1])
 
 
 if __name__ == '__main__':

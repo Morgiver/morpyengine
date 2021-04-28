@@ -1,6 +1,6 @@
 import sdl2
 import sdl2.ext
-from Constants import *
+from src.morpyengine.Constants import *
 
 
 class Engine:
